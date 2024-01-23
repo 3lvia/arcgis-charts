@@ -37,7 +37,7 @@ spec:
                 cpu: 50m
                 memory: 100Mi
           restartPolicy: Never
-          serviceAccount: arcgis-k8s-demo
-          serviceAccountName: arcgis-k8s-demo
+          serviceAccount: {{ required "Missing .Values.serviceAccount" $.Values.serviceAccount }}
+          serviceAccountName: {{ required "Missing .Values.serviceAccount" $.Values.serviceAccount }}
   successfulJobsHistoryLimit: 0
   failedJobsHistoryLimit: 1
