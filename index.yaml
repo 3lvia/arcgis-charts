@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
-  helmchart:
+  arcgis-cronjob:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-23T15:12:54.704809238+01:00"
+    created: "2024-01-23T16:20:40.154764937+01:00"
     description: A Helm chart for Kubernetes
-    digest: 77ae9dbedc80fc0399b10251d703872ba76171e2183ec455842016863cb6dcbd
-    name: helmchart
+    digest: 0eebf9595fccb07b198f99663f90fa2523995089a689da6189db39845554f86a
+    name: arcgis-cronjob
     type: application
     urls:
-    - helmchart-0.1.0.tgz
+    - arcgis-cronjob-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-23T15:12:54.704253163+01:00"
+generated: "2024-01-23T16:20:40.154556137+01:00"
