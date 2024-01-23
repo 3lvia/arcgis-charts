@@ -1,0 +1,43 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ required "Missing .Values.name" .Values.name }}
+  namespace: {{ required "Missing .Values.namespace" .Values.namespace }}
+spec:
+  schedule: {{ required "Missing .Values.schedule" .Values.schedule }}
+  jobTemplate:
+    spec:
+      backoffLimit: 0
+      template:
+        spec:
+          securityContext:
+            fsGroup: 1001
+            supplementalGroups:
+            - 1001
+          containers:
+          - name: {{ required "Missing .Values.name" .Values.name }}
+            image: {{ include "image" . }} 
+            imagePullPolicy: Always
+            env:
+            - name: ENVIRONMENT
+              value: {{ required "Missing .Values.environment" $.Values.environment }}
+            args:
+            -  {{ required "Missing .Values.command" $.Values.command }}
+            securityContext:
+              allowPrivilegeEscalation: false
+              runAsGroup: 1001
+              runAsUser: 1001
+              seccompProfile:
+                type: RuntimeDefault
+            resources:
+              limits:
+                cpu: 800m
+                memory: 1Gi
+              requests:
+                cpu: 50m
+                memory: 100Mi
+          restartPolicy: Never
+          serviceAccount: arcgis-k8s-demo
+          serviceAccountName: arcgis-k8s-demo
+  successfulJobsHistoryLimit: 0
+  failedJobsHistoryLimit: 1
