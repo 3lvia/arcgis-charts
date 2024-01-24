@@ -36,8 +36,10 @@ spec:
             env:
             - name: ENVIRONMENT
               value: {{ required "Missing .Values.environment" $.Values.environment }}
+            {{- with .Values.command }}
             args:
-            -  {{ required "Missing .Values.command" $.Values.command }}
+              {{- toYaml . | nindent 12 }}
+            {{- end }}
             securityContext:
               allowPrivilegeEscalation: false
               runAsGroup: 1001
