@@ -36,6 +36,8 @@ spec:
             env:
             - name: ENVIRONMENT
               value: {{ required "Missing .Values.environment" $.Values.environment }}
+            - name: pythonpath
+              value: {{ required "Missing .Values.pythonpath" $.Values.pythonpath }}
             {{- with .Values.command }}
             args:
               {{- toYaml . | nindent 12 }}
