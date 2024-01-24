@@ -5,7 +5,6 @@ metadata:
   namespace: {{ required "Missing .Values.namespace" .Values.namespace }}
 spec:
   schedule: {{ required "Missing .Values.schedule" .Values.schedule }}
-  schedule: {{ required "Missing .Values.schedule" .Values.schedule }}
   {{- else if kindIs "float64" .Values.schedule }}
   schedule: {{ .Values.schedule }}
   {{- else if kindIs "map" .Values.schedule }}
