@@ -5,6 +5,21 @@ metadata:
   namespace: {{ required "Missing .Values.namespace" .Values.namespace }}
 spec:
   schedule: {{ required "Missing .Values.schedule" .Values.schedule }}
+  schedule: {{ required "Missing .Values.schedule" .Values.schedule }}
+  {{- else if kindIs "float64" .Values.schedule }}
+  schedule: {{ .Values.schedule }}
+  {{- else if kindIs "map" .Values.schedule }}
+  {{- if eq .Values.environment "dev" }}
+  schedule: {{ required "Missing .Values.schedule.dev" .Values.schedule.dev }}
+  {{- else if eq .Values.environment "test" }}
+  schedule: {{ required "Missing .Values.schedule.test" .Values.schedule.test }}
+  {{- else if eq .Values.environment "prod" }}
+  schedule: {{ required "Missing .Values.schedule.prod" .Values.schedule.prod }}
+  {{- end }}
+  {{- else }}
+  {{- fail ".Values.replicaCount must either be a number or a map" }}
+  {{- end }}
+
   jobTemplate:
     spec:
       backoffLimit: 0
