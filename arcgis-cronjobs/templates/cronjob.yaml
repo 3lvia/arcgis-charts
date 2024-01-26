@@ -36,7 +36,7 @@ spec:
             env:
             - name: ENVIRONMENT
               value: {{ required "Missing .Values.environment" $.Values.environment }}
-            - name: pythonpath
+            - name: PYTHONPATH
               value: {{ required "Missing .Values.pythonpath" $.Values.pythonpath }}
             {{- with .Values.command }}
             args:
