@@ -26,9 +26,9 @@ spec:
       template:
         spec:
           securityContext:
-            fsGroup: 1001
+            fsGroup: 1000
             supplementalGroups:
-            - 1001
+            - 1000
           containers:
           - name: {{ required "Missing .Values.name" .Values.name }}
             image: {{ include "image" . }} 
@@ -44,8 +44,8 @@ spec:
             {{- end }}
             securityContext:
               allowPrivilegeEscalation: false
-              runAsGroup: 1001
-              runAsUser: 1001
+              runAsGroup: 1000
+              runAsUser: 1000
               seccompProfile:
                 type: RuntimeDefault
             resources:
