@@ -3,12 +3,12 @@ entries:
   arcgis-cronjob:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-02-08T11:36:50.780028357+01:00"
+    created: "2024-02-08T16:48:02.547370134+01:00"
     description: A Helm chart for Kubernetes
-    digest: 652f0ee61bfa93a9deb91a3c376f09880d4f606f9e3062b26d388efd3ed60ea0
+    digest: 9dfbe945af5a22dfdaf4e60e18befc5eca23b121360e16a38b21bdf00e506173
     name: arcgis-cronjob
     type: application
     urls:
     - arcgis-cronjob-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-08T11:36:50.779171857+01:00"
+generated: "2024-02-08T16:48:02.547154134+01:00"
