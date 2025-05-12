@@ -38,6 +38,12 @@ spec:
               value: {{ required "Missing .Values.environment" $.Values.environment }}
             - name: PYTHONPATH
               value: {{ required "Missing .Values.pythonpath" $.Values.pythonpath }}
+            - name: OTEL_EXPORTER_OTLP_PROTOCOL
+              value: grpc
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: http://otel-collector.monitoring.svc.cluster.local:4317
+            - name: OTEL_SERVICE_NAME
+              value: {{ required "Missing .Values.name" .Values.name }}
             {{- with .Values.command }}
             args:
               {{- toYaml . | nindent 12 }}
