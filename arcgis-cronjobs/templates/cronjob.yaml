@@ -23,6 +23,7 @@ spec:
   jobTemplate:
     spec:
       backoffLimit: 0
+      ttlSecondsAfterFinished: 36000
       template:
         spec:
           securityContext:
