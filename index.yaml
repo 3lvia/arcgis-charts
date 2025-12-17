@@ -3,7 +3,17 @@ entries:
   arcgis-cronjob:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-11-17T08:56:00.493013097+01:00"
+    created: "2025-12-17T14:03:54.714429743+01:00"
+    description: A Helm chart for Kubernetes
+    digest: e0ff84e45e3f51646bf1e0fd3de7f0b043dddea7a1c6723035c939665b69c6df
+    name: arcgis-cronjob
+    type: application
+    urls:
+    - arcgis-cronjob-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-12-17T14:03:54.714336883+01:00"
     description: A Helm chart for Kubernetes
     digest: 8b8d808bb64c367da1e1e559971fcef729f4506f41711e1267e4399e13f93bc2
     name: arcgis-cronjob
@@ -13,7 +23,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-11-17T08:56:00.492884052+01:00"
+    created: "2025-12-17T14:03:54.713998308+01:00"
     description: A Helm chart for Kubernetes
     digest: b105cfe12a6197a00fbb26bb34d35fce1e226a9c19d2d63d8fe0b4bb2c3e8dce
     name: arcgis-cronjob
@@ -23,7 +33,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-11-17T08:56:00.492708806+01:00"
+    created: "2025-12-17T14:03:54.713403778+01:00"
     description: A Helm chart for Kubernetes
     digest: 2a403690cebebf6eb0dbf8490ecc32d46ecfda4e90faa1edaa68e49387baa5a2
     name: arcgis-cronjob
@@ -33,7 +43,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-11-17T08:56:00.492591535+01:00"
+    created: "2025-12-17T14:03:54.713010222+01:00"
     description: A Helm chart for Kubernetes
     digest: 155ed7c5c7506e17deef0bce79c55797d33e947cecced8c91fd0bb88190ec5a0
     name: arcgis-cronjob
@@ -41,4 +51,4 @@ entries:
     urls:
     - arcgis-cronjob-0.1.0.tgz
     version: 0.1.0
-generated: "2025-11-17T08:56:00.492306853+01:00"
+generated: "2025-12-17T14:03:54.712512498+01:00"
